@@ -5,6 +5,7 @@ const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
 const schema = yup.object().shape({
     firstName: yup.string().min(3).required("Nombre debe tener mínimo 3 caracteres"),
     lastName: yup.string().min(3).required("Apellido debe tener mínimo 3 caracteres"),
+    age: yup.number().required("Introduce una edad válida").positive().integer().isValid(),
     email: yup.string().email().required("Introduce un email valido"),
     password: yup
     .string()
