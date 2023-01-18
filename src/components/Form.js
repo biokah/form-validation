@@ -14,7 +14,8 @@ const Form = () => {
       lastName: "",
       email: "",
       password: "",
-      confirmPassword: ""
+      confirmPassword: "",
+      edad:""
       
     },
     validationSchema: schema,
@@ -81,8 +82,14 @@ const Form = () => {
             onChange={(e) => setInputValue("confirmPassword", e.target.value)}
           />
           <span className="text-white text-left text-xs absolute left-0 bottom-0">{formik.errors.confirmPassword}</span>
-          </article>
           
+          <input
+              className="rounded px-2 py-1 w-full mb-5"
+              placeholder="Edad"
+              value={formik.values.edad}
+              onChange={(e) => setInputValue("edad", e.target.value)}
+            />
+          </article>
         
         <button className={`w-full rounded py-1 ${!formik.isValid ? 'bg-gray-200' : 'bg-white'}`}
         type="submit" disabled={!formik.isValid}>

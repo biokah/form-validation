@@ -16,7 +16,8 @@ const schema = yup.object().shape({
     confirmPassword: yup
     .string()
     .required()
-    .oneOf([yup.ref("password"), null], "Passwords must match")
+    .oneOf([yup.ref("password"), null], "Passwords must match"),
+    edad: yup.number().min(3).required("Edad must be a number")
   });
 
 
