@@ -32,7 +32,7 @@ const Form = () => {
 
 
   return (
-    <div className="form-wrapper bg-violet-400 absolute top-1/2 left-1/2 rounded p-4 r">
+    <div className="form-wrapper bg-green-400 absolute top-1/2 left-1/2 rounded p-4 r">
       <h1 className="text-2xl font-bold text-white text-center mb-3">Sign Up</h1>
       <form 
         className="" 
@@ -89,6 +89,17 @@ const Form = () => {
             placeholder="Confirm Password"
             value={formik.values.confirm}
             onChange={(e) => setInputValue("confirmPassword", e.target.value)}
+          />
+          <span className="text-white text-left text-xs absolute left-0 bottom-0">{formik.errors.confirmPassword}</span>
+          </article>
+          <article className="relative">
+          <input
+            name="age"
+            id="age"
+            placeholder="Age"
+            className="rounded px-2 py-1 w-full mb-5"
+            value={formik.values.age}
+            onChange={formik.handleChange}
           />
           <span className="text-white text-left text-xs absolute left-0 bottom-0">{formik.errors.confirmPassword}</span>
           </article>
