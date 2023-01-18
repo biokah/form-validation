@@ -6,6 +6,7 @@ const schema = yup.object().shape({
     firstName: yup.string().min(3).required("Nombre debe tener mínimo 3 caracteres"),
     lastName: yup.string().min(3).required("Apellido debe tener mínimo 3 caracteres"),
     email: yup.string().email().required("Introduce un email valido"),
+    age: yup.number().positive().integer().required("Introduce un valor valido"),
     password: yup
     .string()
     .required('Please Enter your password')

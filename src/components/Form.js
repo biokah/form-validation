@@ -13,6 +13,7 @@ const Form = () => {
       firstName: "",
       lastName: "",
       email: "",
+      age:"",
       password: "",
       confirmPassword: ""
       
@@ -63,6 +64,15 @@ const Form = () => {
             onChange={(e) => setInputValue("email", e.target.value)}
           />
           <span className="text-white text-left text-xs absolute left-0 bottom-0">{formik.errors.email}</span>
+          </article>
+          <article className="relative">
+          <input
+            className="rounded px-2 py-1 w-full mb-5"
+            placeholder="age"
+            value={formik.values.age}
+            onChange={(e) => setInputValue("age", e.target.value)}
+          />
+          <span className="text-white text-left text-xs absolute left-0 bottom-0">{formik.errors.edad}</span>
           </article>
           <article className="relative">
           <input
