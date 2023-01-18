@@ -39,6 +39,8 @@ const Form = () => {
         onSubmit={formik.handleSubmit}>
         <article className="relative">
           <input
+            id="firstName"
+            name="firstName"
             placeholder="First Name"
             className="rounded px-2 py-1 w-full mb-5"
             value={formik.values.firstName}
@@ -48,6 +50,8 @@ const Form = () => {
         </article>   
         <article className="relative">
             <input
+              id="lastName"
+              name="lastName"
               className="rounded px-2 py-1 w-full mb-5"
               placeholder="Last Name"
               value={formik.values.lastName}
@@ -57,6 +61,8 @@ const Form = () => {
           </article>
           <article className="relative">
           <input
+            id="email"
+            name="email"
             className="rounded px-2 py-1 w-full mb-5"
             placeholder="Email"
             value={formik.values.email}
@@ -66,6 +72,8 @@ const Form = () => {
           </article>
           <article className="relative">
           <input
+            id="password"
+            name="password"
             className="rounded px-2 py-1 w-full mb-5"
             placeholder="Password"
             value={formik.values.confirm}
@@ -75,6 +83,8 @@ const Form = () => {
           </article>
           <article className="relative">
           <input
+            id="confirm"
+            name="confirm"
             className="rounded px-2 py-1 w-full mb-5"
             placeholder="Confirm Password"
             value={formik.values.confirm}
