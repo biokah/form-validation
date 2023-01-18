@@ -14,7 +14,8 @@ const Form = () => {
       lastName: "",
       email: "",
       password: "",
-      confirmPassword: ""
+      confirmPassword: "",
+      age:""
       
     },
     validationSchema: schema,
@@ -39,50 +40,68 @@ const Form = () => {
         onSubmit={formik.handleSubmit}>
         <article className="relative">
           <input
+            name="firstName"
+            id="firstName"
             placeholder="First Name"
             className="rounded px-2 py-1 w-full mb-5"
             value={formik.values.firstName}
-            onChange={(e) => setInputValue("firstName", e.target.value)}
+            onChange={formik.handleChange}
           />
           <span className="text-white text-xs absolute left-0 bottom-0">{formik.errors.firstName}</span>
         </article>   
         <article className="relative">
             <input
+              name="lastName"
+              id="lasName"
               className="rounded px-2 py-1 w-full mb-5"
               placeholder="Last Name"
               value={formik.values.lastName}
-              onChange={(e) => setInputValue("lastName", e.target.value)}
+              onChange={formik.handleChange}
             />
             <span className="text-white text-left text-xs absolute left-0 bottom-0">{formik.errors.lastName}</span>
           </article>
           <article className="relative">
           <input
+            name="email"
+            id="email"
             className="rounded px-2 py-1 w-full mb-5"
             placeholder="Email"
             value={formik.values.email}
-            onChange={(e) => setInputValue("email", e.target.value)}
+            onChange={formik.handleChange}
           />
           <span className="text-white text-left text-xs absolute left-0 bottom-0">{formik.errors.email}</span>
           </article>
           <article className="relative">
           <input
+            name="password"
+            id="password"
             className="rounded px-2 py-1 w-full mb-5"
             placeholder="Password"
             value={formik.values.confirm}
-            onChange={(e) => setInputValue("password", e.target.value)}
+            onChange={formik.handleChange}
           />
           <span className="text-white text-left text-xs absolute left-0 bottom-0">{formik.errors.password}</span>
           </article>
           <article className="relative">
           <input
+            name="confirmPassword"
+            id="confirmPassword"
             className="rounded px-2 py-1 w-full mb-5"
             placeholder="Confirm Password"
             value={formik.values.confirm}
-            onChange={(e) => setInputValue("confirmPassword", e.target.value)}
+            onChange={formik.handleChange}
           />
           <span className="text-white text-left text-xs absolute left-0 bottom-0">{formik.errors.confirmPassword}</span>
-          </article>
           
+          <input
+              name="age"
+              id="age"
+              className="rounded px-2 py-1 w-full mb-5"
+              placeholder="Age"
+              value={formik.values.age}
+              onChange={formik.handleChange}
+            />
+          </article>
         
         <button className={`w-full rounded py-1 ${!formik.isValid ? 'bg-gray-200' : 'bg-white'}`}
         type="submit" disabled={!formik.isValid}>
