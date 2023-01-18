@@ -14,8 +14,8 @@ const Form = () => {
       lastName: "",
       email: "",
       password: "",
-      confirmPassword: ""
-      
+      confirmPassword: "",
+      age: ""
     },
     validationSchema: schema,
     onSubmit: handleOnSubmit,
