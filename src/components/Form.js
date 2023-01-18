@@ -37,10 +37,12 @@ const Form = () => {
       <form className="" onSubmit={formik.handleSubmit}>
         <article className="relative">
           <input
+            name="FirstName"
+            id="FirstName"
             placeholder="First Name"
             className="rounded px-2 py-1 w-full mb-5"
             value={formik.values.firstName}
-            onChange={(e) => setInputValue("firstName", e.target.value)}
+            onChange={formik.handleChange}
           />
           <span className="text-white text-xs absolute left-0 bottom-0">
             {formik.errors.firstName}
@@ -48,10 +50,12 @@ const Form = () => {
         </article>
         <article className="relative">
           <input
+            name="LastName"
+            id="LastName"
             className="rounded px-2 py-1 w-full mb-5"
             placeholder="Last Name"
             value={formik.values.lastName}
-            onChange={(e) => setInputValue("lastName", e.target.value)}
+            onChange={formik.handleChange}
           />
           <span className="text-white text-left text-xs absolute left-0 bottom-0">
             {formik.errors.lastName}
@@ -59,10 +63,12 @@ const Form = () => {
         </article>
         <article className="relative">
           <input
+            name="Age"
+            id="Age"
             className="rounded px-2 py-1 w-full mb-5"
             placeholder="Age"
             value={formik.values.age}
-            onChange={(e) => setInputValue("age", e.target.value)}
+            onChange={formik.handleChange}
           />
           <span className="text-white text-left text-xs absolute left-0 bottom-0">
             {formik.errors.age}
@@ -70,10 +76,12 @@ const Form = () => {
         </article>
         <article className="relative">
           <input
+            name="Email"
+            id="Email"
             className="rounded px-2 py-1 w-full mb-5"
             placeholder="Email"
             value={formik.values.email}
-            onChange={(e) => setInputValue("email", e.target.value)}
+            onChange={formik.handleChange}
           />
           <span className="text-white text-left text-xs absolute left-0 bottom-0">
             {formik.errors.email}
@@ -81,10 +89,12 @@ const Form = () => {
         </article>
         <article className="relative">
           <input
+            name="Password"
+            id="Password"
             className="rounded px-2 py-1 w-full mb-5"
             placeholder="Password"
             value={formik.values.confirm}
-            onChange={(e) => setInputValue("password", e.target.value)}
+            onChange={formik.handleChange}
           />
           <span className="text-white text-left text-xs absolute left-0 bottom-0">
             {formik.errors.password}
@@ -92,10 +102,12 @@ const Form = () => {
         </article>
         <article className="relative">
           <input
+            name="ConfirmPassword"
+            id="ConfirmPassword"
             className="rounded px-2 py-1 w-full mb-5"
             placeholder="Confirm Password"
             value={formik.values.confirm}
-            onChange={(e) => setInputValue("confirmPassword", e.target.value)}
+            onChange={formik.handleChange}
           />
           <span className="text-white text-left text-xs absolute left-0 bottom-0">
             {formik.errors.confirmPassword}
