@@ -15,7 +15,7 @@ const Form = () => {
       email: "",
       password: "",
       confirmPassword: "",
-      edad:""
+      age:""
       
     },
     validationSchema: schema,
@@ -85,12 +85,12 @@ const Form = () => {
           </article>
           <article className="relative">
           <input
-            placeholder="Edad"
+            placeholder="Age"
             className="rounded px-2 py-1 w-full mb-5"
             value={formik.values.edad}
-            onChange={(e) => setInputValue("edad", e.target.value)}
+            onChange={(e) => setInputValue("age", e.target.value)}
           />
-          <span className="text-white text-xs absolute left-0 bottom-0">{formik.errors.edad}</span>
+          <span className="text-white text-xs absolute left-0 bottom-0">{formik.errors.age}</span>
         </article>
           
         
