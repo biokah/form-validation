@@ -11,7 +11,7 @@ const schema = yup.object().shape({
     .string()
     .min(3)
     .required("Apellido debe tener mínimo 3 caracteres"),
-  edad: yup.number().required().positive().integer(),
+  age: yup.number().required().positive().integer(),
   email: yup.string().email().required("Introduce un email valido"),
   password: yup
     .string()

@@ -11,7 +11,7 @@ const Form = () => {
     initialValues: {
       firstName: "",
       lastName: "",
-      edad: "",
+      age: "",
       email: "",
       password: "",
       confirmPassword: "",
@@ -60,12 +60,12 @@ const Form = () => {
         <article className="relative">
           <input
             className="rounded px-2 py-1 w-full mb-5"
-            placeholder="Edad"
-            value={formik.values.edad}
-            onChange={(e) => setInputValue("edad", e.target.value)}
+            placeholder="Age"
+            value={formik.values.age}
+            onChange={(e) => setInputValue("age", e.target.value)}
           />
           <span className="text-white text-left text-xs absolute left-0 bottom-0">
-            {formik.errors.edad}
+            {formik.errors.age}
           </span>
         </article>
         <article className="relative">
